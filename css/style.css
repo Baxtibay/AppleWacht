@@ -1,3 +1,10 @@
+/* CUSTOM-PROPS */
+:root {
+  --accent-color: #EA625C;
+  --text-color: #333;
+}
+
+
 /* GLOBAL */
 html {
   box-sizing: border-box;
@@ -12,8 +19,8 @@ html {
 }
 
 *:focus {
-  outline: 2px dashed #333;
-  outline-offset: 3px;
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 2px;
 }
 
 body {
@@ -23,10 +30,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 1.5;
   background-color: #fff;
-  color: #333;
+  color: var(--text-color);
 }
 
 img {
@@ -34,15 +41,29 @@ img {
   height: auto;
 }
 
+.button {
+  display: inline-block;
+  width: 260px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
 
+.button-orange {
+  background-color: var(--accent-color);
+}
 
 
 /* CONTAINER  */
 .container {
   width: 100%;
-  max-width: 1040px;
-  padding-left: 20px;
-  padding-right: 20px;
+  max-width: 1100px;
+  padding-left: 50px;
+  padding-right: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -52,17 +73,38 @@ img {
 .site-header {
   padding-top: 30px;
   padding-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .site-header-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+}
+
+.site-header-logo {
+  margin-right: auto;
+  transition: hover .3s ease;
+}
+
+.site-header-logo:hover {
+  opacity: 0.8;
+}
+
+.site-header-logo:active {
+  opacity: 0.6;
+}
+
+.site-header-logo-img {
+  display: block;
+  width: 35px;
+  height: 42px;
+  object-fit: contain;
 }
 
 
 /* SITENAV */
 .sitenav {
-  margin-left:  auto;
+  margin-right: 40px;
 }
 
 .sitenav-list {
@@ -78,12 +120,18 @@ img {
 }
 
 .sitenav-link {
-  text-decoration: none;
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
+  font-size: 15px;
   color: #333;
+  text-decoration: none;
+  transition: border-bottom .3s ease;
 }
 
 .sitenav-link:hover {
-  opacity: 0.8;
+  border-bottom: 3px solid #333;
 }
 
 .sitenav-link:active {
@@ -91,11 +139,59 @@ img {
 }
 
 .global-search-input {
-  width: 170px;
-  margin-left: 40px;
   border: 0;
+  padding-top: 6px;
   padding-bottom: 6px;
   border-bottom: 1px solid #333;
   font-size: 15px;
   line-height: 23px;
+}
+
+
+/* MAIN */
+/* ABAUT-APPLE-WATCH-SECTION */
+.location-img {
+  display: flex;
+  margin-right: auto;
+}
+.abaut-apple-watch {
+  flex-grow: 1;
+  width: 490px;
+  height: 477px;
+  margin-right: 245px;
+  border: 1px solid #000;
+  padding-top: 90px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* .abaut-apple-watch-wrapper {
+} */
+
+.apple-watch-title {
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #000;
+}
+
+.apple-watch-text {
+  display: inline-block;
+  width: 490px;
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-left: 40px;
+  border-left: 6px solid #888;
+  font-size: 16px;
+  line-height: 24px;
+  color: #777;
+}
+
+.abaut-apple-watch-img {
+  display: flex;
+  margin-left: auto;
+  position: relative;
+  right: -10%;
 }

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Apple Wacht Landing page</title>
 
-  <!-- GOOGLE FONTS -->
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -18,11 +18,9 @@
 <body>
   <header class="site-header">
     <div class="site-header-container container">
-      <div class="logo">
-        <a href="#">
-          <img src="img/apple-logo.svg" alt="Apple logo">
-        </a>
-      </div>
+      <a class="site-header-logo" href="#">
+        <img class="site-header-logo-img" src="img/apple-logo.svg" alt="Apple logo" width="35" height="42">
+      </a>
       <nav class="sitenav">
         <ul class="sitenav-list">
           <li class="sitenav-item">
@@ -47,6 +45,19 @@
     </div>
   </header>
 
+
+  <main class="site-main">
+    <div class="location-img">
+      <section class="abaut-apple-watch">
+        <h1 class="apple-watch-title">Freedom calls.</h1>
+        <p class="apple-watch-text">
+          Answer a call from your surfboard. Ask Siri to send a message. Stream your favorite songs on your run. And do it all while leaving your phone behind. Introducing Apple Watch Series 3 with cellular. Now you have the freedom to go with just your watch.
+        </p>
+        <button class="button button-orange" type="submit">Watch the keynote</button>
+      </section>
+      <img class="abaut-apple-watch-img" src="img/watches.png" alt="" width="587" height="565">
+    </div>
+  </main>
   <script src="js/main.js"></script>
 </body>
 </html>
