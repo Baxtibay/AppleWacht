@@ -1,7 +1,8 @@
 /* CUSTOM-PROPS */
 :root {
-  --accent-color: #EA625C;
+  --primary-color: #ea625c;
   --text-color: #333;
+  --primary-dark: #c9514c;
 }
 
 
@@ -19,7 +20,7 @@ html {
 }
 
 *:focus {
-  outline: 2px dashed var(--accent-color);
+  outline: 2px dashed var(--primary-color);
   outline-offset: 2px;
 }
 
@@ -41,22 +42,6 @@ img {
   height: auto;
 }
 
-.button {
-  display: inline-block;
-  width: 260px;
-  padding: 12px;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-}
-
-.button-orange {
-  background-color: var(--accent-color);
-}
-
 
 /* CONTAINER  */
 .container {
@@ -69,11 +54,40 @@ img {
 }
 
 
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 12px 38px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--primary-dark);
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+
+/* MAIN-CONTENT */
+.main-content {
+  flex-grow: 1;
+}
+
+
 /* HEADER  */
 .site-header {
   padding-top: 30px;
   padding-bottom: 30px;
-  margin-bottom: 50px;
 }
 
 .site-header-container {
@@ -148,50 +162,49 @@ img {
 }
 
 
-/* MAIN */
-/* ABAUT-APPLE-WATCH-SECTION */
-.location-img {
-  display: flex;
-  margin-right: auto;
-}
-.abaut-apple-watch {
-  flex-grow: 1;
-  width: 490px;
-  height: 477px;
-  margin-right: 245px;
-  border: 1px solid #000;
-  padding-top: 90px;
+/* HEO */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 185px;
   border-bottom: 2px solid #ddd;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 550px) bottom;
 }
 
-/* .abaut-apple-watch-wrapper {
-} */
 
-.apple-watch-title {
-  display: inline-block;
-  margin: 0;
+/* LEAD-CTA */
+.lead-cta {
+  width: 100%;
+  max-width: 490px;
+}
+
+.lead-cta-heading {
+  margin-top: 0;
   margin-bottom: 30px;
   font-size: 50px;
-  line-height: 60px;
-  font-weight: 700;
+  line-height: 1.2;
   color: #000;
 }
 
-.apple-watch-text {
-  display: inline-block;
-  width: 490px;
+.lead-cta-text {
+  padding-left: 37px;
+  border-left: 3px solid #888;
   margin-top: 0;
   margin-bottom: 30px;
-  padding-left: 40px;
-  border-left: 6px solid #888;
-  font-size: 16px;
-  line-height: 24px;
   color: #777;
 }
 
-.abaut-apple-watch-img {
-  display: flex;
-  margin-left: auto;
-  position: relative;
-  right: -10%;
+
+/* RETINA-BGS */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../img/intro-bg@2x.jpg")
+  }
 }
