@@ -57,6 +57,7 @@ img {
 /* BUTTON */
 .button {
   display: inline-block;
+  min-width: 260px;
   padding: 12px 38px;
   border: none;
   background-color: var(--primary-color);
@@ -64,6 +65,7 @@ img {
   font-size: 18px;
   line-height: 1.5;
   font-weight: bold;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;transition: background-color 0.3s ease;
   cursor: pointer;
@@ -162,7 +164,7 @@ img {
 }
 
 
-/* HEO */
+/* HERO */
 .hero {
   padding-top: 140px;
   padding-bottom: 185px;
@@ -185,6 +187,15 @@ img {
   font-size: 50px;
   line-height: 1.2;
   color: #000;
+}
+
+.lead-cta-white .lead-cta-heading {
+  color: #fff;
+}
+
+.lead-cta-white .lead-cta-text {
+  color: #fff;
+  border-color: #fff;
 }
 
 .lead-cta-text {
@@ -266,6 +277,40 @@ img {
 
 .lined-link:hover::before {
   width: 60px;
+}
+
+
+/* PROMO */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo-img {
+  width: 400px;
+  height: 600px;
+}
+
+
+/* RUNNERS */
+.runners {
+  padding-top: 240px;
+  padding-bottom: 240px;
+  background-image: url("../img/runners.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.runners-lead-cta {
+  margin-left: auto;
 }
 
 
